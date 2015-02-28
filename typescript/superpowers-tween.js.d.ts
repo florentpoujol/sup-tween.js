@@ -12,10 +12,10 @@ declare module SPTWEEN {
   export function update(time?:number): boolean;
 
   export interface TweenCallback {
-    (object:Object): void;
+    (): void;
   }
   export interface TweenUpdateCallback {
-    (object:Object, progression:number): void;
+    (progression:number): void;
   }
 
   export interface EasingFunction {
@@ -27,6 +27,7 @@ declare module SPTWEEN {
   
   export class Tween {
     constructor(object?:Object);
+    from(object:Object): Tween;
     to(properties:Object, duration?:number): Tween;
     duration(duration:number): Tween;
     isRelative(isRelative:boolean): Tween;

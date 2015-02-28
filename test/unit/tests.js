@@ -1136,7 +1136,7 @@
 
 				var obj = new MyObject( { x:-5, y:-5, z:-5 } );
 
-				var t = new TWEEN.Tween()
+				var t = new TWEEN.Tween( obj )
 				.from( obj )
 				.to( { position: { x: 10, y: 5 } } )
 				.isRelative( true )

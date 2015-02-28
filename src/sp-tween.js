@@ -172,6 +172,13 @@ SPTWEEN.Tween = function ( object ) {
 
   };
 
+  this.from = function ( object ) {
+
+    _object = object;
+    return this;
+
+  };
+
   this.to = function ( object, duration ) {
 
     if ( duration !== undefined ) {
