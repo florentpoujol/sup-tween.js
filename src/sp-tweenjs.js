@@ -1,9 +1,9 @@
 /**
- * Tween.js - Licensed under the MIT license
- * https://github.com/sole/tween.js
+ * sp-tweenjs.js - Licensed under the MIT license
+ * https://github.com/florentpoujol/superpowers-tweenjs
  * ----------------------------------------------
  *
- * See https://github.com/sole/tween.js/graphs/contributors for the full list of contributors.
+ * A fork of Soledad Penadés' tween.js library : https://github.com/tweenjs/tween.js
  * Thank you all, you're awesome!
  */
 
@@ -18,13 +18,13 @@ if ( Date.now === undefined ) {
 
 }
 
-var TWEEN = TWEEN || ( function () {
+var SPTWEEN = SPTWEEN || ( function () {
 
 	var _tweens = [];
 
 	return {
 
-		REVISION: '14',
+		REVISION: '1',
 
 		getAll: function () {
 
@@ -85,12 +85,11 @@ var TWEEN = TWEEN || ( function () {
 
 } )();
 
-TWEEN.Tween = function ( object ) {
+SPTWEEN.Tween = function ( object ) {
 
   var _object = object || {};
   var _valuesStart = {};
   var _valuesEnd = {};
-  var _valuesStartRepeat = {};
   var _duration = 1000;
   var _isRelative = false;
   var _repeat = 0;
@@ -101,8 +100,8 @@ TWEEN.Tween = function ( object ) {
   var _isPaused = false;
   var _pauseDuration = 0;
   var _pauseStartTime = 0;
-  var _easingFunction = TWEEN.Easing.Linear.None;
-  var _interpolationFunction = TWEEN.Interpolation.Linear;
+  var _easingFunction = SPTWEEN.Easing.Linear.None;
+  var _interpolationFunction = SPTWEEN.Interpolation.Linear;
   var _chainedTweens = [];
   var _onStartCallback = null;
   var _onStartCallbackFired = false;
@@ -114,12 +113,16 @@ TWEEN.Tween = function ( object ) {
 
   this.test = false;
 
-  // reset in start()
-  // filled in _setupDynamicProperty()
-  // keys are property name, values are object with getter and setter properties
+  // Keys are property name, values are object with getter and setter properties.
+  // Filled in _setupDynamicProperty().
+  // Reset in start().
   var _accessorsByProperties = {};
 
-  // called from start()
+  /**
+  * Check if the provided property is "dynamic" on _object, that is if _object[property] === undefined but the property name match the name of a couple of getter/setter : get[Property]()/set[Property]().
+  * Called from start().
+  * @param {string} property - The property name.
+  */
   var _setupDynamicProperty = function( property ) {
 
     if ( _object[ property ] === undefined ) {
@@ -136,33 +139,36 @@ TWEEN.Tween = function ( object ) {
 
   };
 
-  // called from start() and update()
+  /**
+  * Get the provided property's value on the _object.
+  * Called from start() and update().
+  * @param {string} property - The property name.
+  * @return {any} 
+  */
   var _getObjectValue = function( property ) {
     if (this.test) console.log("getobjectvalue", property, _accessorsByProperties[ property ]);
 
     if ( _accessorsByProperties[ property ] !== undefined ) {
       return _accessorsByProperties[ property ].getter.call( _object );
     }
-    
-    else {
-      return _object[ property ];
-    }
+    return _object[ property ];
 
   };
   
-  // called from start() and update()
+  /**
+  * Get the provided property's value on the _object.
+  * Called from start() and update().
+  * @param {string} property - The property name.
+  * @param value {any}
+  */
   var _setObjectValue = function( property, value ) {
-
     if (this.test) console.log("setobjectvalue", property, value, _accessorsByProperties[ property ]);
-    
+
     if ( _accessorsByProperties[ property ] !== undefined ) {
       if (this.test) console.log("set", property, value);
       _accessorsByProperties[ property ].setter.call( _object, value );
     }
-
-    else {
-      _object[ property ] = value;
-    }
+    _object[ property ] = value;
 
   };
 
@@ -170,7 +176,6 @@ TWEEN.Tween = function ( object ) {
   this.from = function ( object ) {
 
     _object = object;
-
     return this;
 
   };
@@ -204,8 +209,8 @@ TWEEN.Tween = function ( object ) {
   };
 
   this.start = function ( time ) {
-    if ( ! ( this in TWEEN.getAll() ) ) {
-      TWEEN.add( this );
+    if ( ! ( this in SPTWEEN.getAll() ) ) {
+      SPTWEEN.add( this );
     }
 
     _isPlaying = true;
@@ -216,12 +221,12 @@ TWEEN.Tween = function ( object ) {
     _pauseDuration = 0;
 
     if (this.test) console.log("start tweener",_valuesStart, _object, _valuesEnd);
-    var endValue, nEndValue, objectValue, nObjectValue, property, nProperty, endValueType;
+    var endValue, objectValue, property, endValueType, nEndValue, nObjectValue, nProperty; // n for "nested"
     var allowedTypes = [ "number", "string", "object" ]; // type object is for objects, arrays and null
     _accessorsByProperties = {};
 
-    // loop on _valuesEnd to fill _valuesStart and _valuesStartRepeat
-    // note : except for undefined object values, _object doesn't need to be filled or fixed because it will be updated from update().
+    // loop on _valuesEnd to fill _valuesStart
+    // except for object values in _valuesEnd that are undefined in _object, _object doesn't need to be filled or fixed because it will be updated from update().
     for ( property in _valuesEnd ) {
 
       endValue = _valuesEnd[ property ];
@@ -251,13 +256,15 @@ TWEEN.Tween = function ( object ) {
         if ( _valuesStart[ property ] === undefined ) {
           _valuesStart[ property ] = {};
         }
+
         objectValue = _getObjectValue( property );
         if ( objectValue === undefined ) {
           objectValue = {};
-          _setObjectValue( property, objectValue );
+          _setObjectValue( property, objectValue ); 
+          // could directly do _object[property] = {} as this case is unlikely to ever happens with dynamic properties ?
         }
 
-        for ( nProperty in endValue ) {
+        for ( nProperty in endValue ) { // endValue is the object, nested in _valuesEnd, that contains the values to tween
           
           nEndValue = endValue[ nProperty ];
           nObjectValue = objectValue[ nProperty ] || 0;
@@ -268,17 +275,15 @@ TWEEN.Tween = function ( object ) {
             _valuesStart[ property ][ nProperty ] = nObjectValue;
 
           }
-          else {
-            _valuesStart[ property ][ nProperty ] = parseFloat( nObjectValue );
+          else { // string or number
+            _valuesStart[ property ][ nProperty ] = parseFloat( nObjectValue ) || 0;
           }
         }
 
       }
-      else { // string or number
-        _valuesStart[ property ] = parseFloat( _getObjectValue( property ) ) || 0;  // ensure it is a number, and not a string
+      else { 
+        _valuesStart[ property ] = parseFloat( _getObjectValue( property ) ) || 0;
       }
-
-      _valuesStartRepeat[ property ] = _valuesStart[ property ];
 
     }
     
@@ -297,9 +302,7 @@ TWEEN.Tween = function ( object ) {
     _isPaused = true;
 
     if ( _onPauseCallback !== null ) {
-
       _onPauseCallback.call( _object );
-
     }
 
     return this;
@@ -307,9 +310,7 @@ TWEEN.Tween = function ( object ) {
   };
 
   this.isPaused = function () {
-
     return _isPaused;
-
   };
 
   this.resume = function () {
@@ -321,9 +322,7 @@ TWEEN.Tween = function ( object ) {
     _isPaused = false;
 
     if ( _onResumeCallback !== null ) {
-
       _onResumeCallback.call( _object );
-
     }
 
     return this;
@@ -336,7 +335,7 @@ TWEEN.Tween = function ( object ) {
       return this;
     }
 
-    TWEEN.remove( this );
+    SPTWEEN.remove( this );
     _isPlaying = false;
 
     if ( _onStopCallback !== null ) {
@@ -350,31 +349,28 @@ TWEEN.Tween = function ( object ) {
 
   };
 
+  /**
+  * Free as much stuff as possible for garbage collection.
+  * @param {boolean=false} recurse If the tween has one or more chained tweens, tell whether to recursively destro them all (true) or just leave them be (false).
+  */
   this.destroy = function ( recurse ) {
     
     if ( _isPlaying === true ) {
-
-      TWEEN.remove( this );
+      SPTWEEN.remove( this );
       _isPlaying = false;
-
     }
 
     this.stopChainedTweens();
 
     if ( recurse === true ) {
-
       for ( var i = 0, numChainedTweens = _chainedTweens.length; i < numChainedTweens; i++ ) {
-        
         _chainedTweens[ i ].destroy( true );
-
       }
-
     }
 
     _object = null;
     _valuesStart = null;
     _valuesEnd = null;
-    _valuesStartRepeat = null;
     _chainedTweens = null;
     _onStartCallback = null;
     _onPauseCallback = null;
@@ -382,6 +378,7 @@ TWEEN.Tween = function ( object ) {
     _onUpdateCallback = null;
     _onCompleteCallback = null;
     _onStopCallback = null;
+
   };
 
   this.stopChainedTweens = function () {
@@ -407,7 +404,7 @@ TWEEN.Tween = function ( object ) {
 
   /**
   * Remove one or several chained tweens.
-  * @param {TWEEN.Tween} [tween] The tween to remove. If null or undefined, all chained tweens will be removed.
+  * @param {SPTWEEN.Tween} [tween] The tween to remove. If null or undefined, all chained tweens will be removed.
   * @returns {boolean} True if at least one tween has been removed, false otherwise.
   */
   this.removeChainedTweens = function ( tween ) {
@@ -517,24 +514,19 @@ TWEEN.Tween = function ( object ) {
 
   // returns true when the tween must be kept in the list of tweens to update
   this.update = function ( time ) {
-     if (this.test) console.log("update tweener", time);
+    if (this.test) console.log("update tweener", time);
     if ( _isPaused === true ) {
-      
       if ( _pauseStartTime === 0 ) {
         // first update after tween is paused
         _pauseStartTime = time;
       }
-
       return true;
-
     } 
     else if ( _pauseStartTime > 0 ) {
       // first update after tween is resumed
-
       _pauseDuration += ( time - _pauseStartTime );
       _pauseStartTime = 0;
       return true;
-
     }
     
     if ( time < _startTime ) {
@@ -558,8 +550,13 @@ TWEEN.Tween = function ( object ) {
     var elapsed = ( time - ( _startTime + _pauseDuration ) ) / _duration;
     elapsed = elapsed > 1 ? 1 : elapsed;
 
-    var progression = _easingFunction( elapsed );
+    var progression = _easingFunction( elapsed ); // % between 0 and 1
 
+    /**
+    * @param {number} start - The value from _valuesStart.
+    * @param {number|string} end - The value from _valuesEnd.
+    * @param {string} endValueType - The type of 'end' param.
+    */
     var getCurrentValue = function( start, end, endValueType ) {
 
       if ( _isRelative === true || endValueType === "string" ) {
@@ -571,25 +568,33 @@ TWEEN.Tween = function ( object ) {
 
     };
 
-    var property, nProperty, start, nStart, end, nEnd, valueType, nObject;
+    var property, start, end, valueType, nProperty, nStart, nEnd, nObject;
     if (this.test) console.log("update tweener", _valuesStart, _object, _valuesEnd, progression, elapsed);
 
     for ( property in _valuesEnd ) {
 
-      start = _valuesStart[ property ] || 0; // ||0 shouldn't be necessary because we make sure the value is not undefined in start()
+      start = _valuesStart[ property ];
       end = _valuesEnd[ property ];
       valueType = typeof end;
+
       if (this.test) console.log("update property", property, end, _object);
       if ( Array.isArray( end ) ) {
         _object[ property ] = _interpolationFunction( end, progression );
       }
+
       else if ( end !== null && valueType === "object") {
 
-        nObject = _getObjectValue( property ); // see comment below the for
+        nObject = _getObjectValue( property );
+        // Keeping a reference to the nObject may be useful when getting/setting the property actually calls a getter/setter.
+        
+        // if the reference is meaningfull, updating it will actually update the data but,
+        // typically, the getter returns a new object instance every time (like a Vector3 for get/setPosition())
+        // so updating the reference (nObject) doesn't actually update the data in the object
+        // unless the setter is called with the new value (as it is done below)
 
         for ( nProperty in end ) {
 
-          nStart = start[ nProperty ] || 0; // same comment for || 0 as above
+          nStart = start[ nProperty ]; 
           // console.log("end", end, nProperty, end[ nProperty ]);
           nEnd = end[ nProperty ];
 
@@ -599,30 +604,21 @@ TWEEN.Tween = function ( object ) {
           else {
             nObject[ nProperty ] = getCurrentValue( nStart, nEnd, typeof nEnd );
           }
-
           if (this.test) console.log( "object value", property, nProperty, nStart, _valuesStart, nEnd, _valuesEnd);
 
         }
         
         if (this.test) console.log("set object value1", property, nObject, _object);
-        _setObjectValue( property, nObject );
-        // this is useful when getting/setting the property actually calls a getter/setter
-        // typically the getter returns a new object instance every time (like a Vector3)
-        // so updating the reference (nObject) doesn't actually update the data in the object
-        // unless the setter is called with the new value
+        _setObjectValue( property, nObject );       
 
       }
+
       else if ( valueType === "number" || valueType === "string" ) {
-
         _setObjectValue( property, getCurrentValue( start, end, valueType ) );
-        // no reason why start should be something other than a number
-        // will be set to null or NaN if start or end are of any other type than string or number
         if (this.test) console.log( "num value", property, start, end, progression, getCurrentValue( start, end ));
-
       }
 
     }
-
     if (this.test) console.log("update tweener 2", _object);
 
 
@@ -642,7 +638,7 @@ TWEEN.Tween = function ( object ) {
 
         if (this.test) console.log("before repeat", _valuesStart, _object, _valuesEnd, _isRelative);
         // reassign starting values, restart by making startTime = now
-        // console.log( "repeat", _valuesStartRepeat, _valuesStart, _object, _valuesEnd );
+        // console.log( "repeat", _valuesStart, _object, _valuesEnd );
         for( property in _valuesStart ) {
 
           // set startValue = currentValue if endValue (or whole tween) is relative
@@ -655,7 +651,7 @@ TWEEN.Tween = function ( object ) {
             _valuesEnd[ property ] = _valuesStart[ property ];
             _valuesStart[ property ] = currentValue;
 
-            // if endValue/currentValue is an object, copy it so that _valuesStart doesn't keep a reference to currentValue which will be updated in start
+            // if endValue/currentValue is an object, copy it so that _valuesStart doesn't keep a reference to currentValue which would be updated in update()
             if ( endValue !== null && Array.isArray( endValue ) === false && endValueType === "object" ) { 
 
               _valuesStart[ property ] = {};
@@ -664,11 +660,12 @@ TWEEN.Tween = function ( object ) {
               }
 
             }
-
             if (this.test) console.log("property after yoyo", property, _valuesStart[ property ], _object[ property ], _valuesEnd[ property ]);
 
           }
           else { // not yoyo
+            // do nothing unless the tween or some of its values are relative
+            // in this case, assign currentValue as the new start value
 
             if ( ( _isRelative === true && endValueType === "number" ) || endValueType === "string" ) {
               _valuesStart[ property ] = currentValue;
@@ -679,12 +676,8 @@ TWEEN.Tween = function ( object ) {
 
               for ( nProperty in endValue ) {
 
-                var nEndValueType = typeof endValue[ nProperty ];
-
-                if ( ( _isRelative === true && nEndValueType === "number" ) || nEndValueType === "string" ) {
-
+                if ( ( _isRelative === true && nEndValueType === "number" ) || typeof endValue[ nProperty ] === "string" ) {
                   _valuesStart[ property ][ nProperty ] = currentValue[ nProperty ];
-
                 }
 
               }
@@ -693,7 +686,6 @@ TWEEN.Tween = function ( object ) {
 
           }
           // what about arrays ?
-          
           if (this.test) console.log("property", property, _valuesStart[ property ], _object[ property ], _valuesEnd[ property ]);
 
         }
@@ -735,7 +727,7 @@ TWEEN.Tween = function ( object ) {
 };
 
 
-TWEEN.Easing = {
+SPTWEEN.Easing = {
 
   Linear: {
 
@@ -977,7 +969,7 @@ TWEEN.Easing = {
 
     In: function ( k ) {
 
-      return 1 - TWEEN.Easing.Bounce.Out( 1 - k );
+      return 1 - SPTWEEN.Easing.Bounce.Out( 1 - k );
 
     },
 
@@ -1005,8 +997,8 @@ TWEEN.Easing = {
 
     InOut: function ( k ) {
 
-      if ( k < 0.5 ) return TWEEN.Easing.Bounce.In( k * 2 ) * 0.5;
-      return TWEEN.Easing.Bounce.Out( k * 2 - 1 ) * 0.5 + 0.5;
+      if ( k < 0.5 ) return SPTWEEN.Easing.Bounce.In( k * 2 ) * 0.5;
+      return SPTWEEN.Easing.Bounce.Out( k * 2 - 1 ) * 0.5 + 0.5;
 
     }
 
@@ -1014,11 +1006,11 @@ TWEEN.Easing = {
 
 };
 
-TWEEN.Interpolation = {
+SPTWEEN.Interpolation = {
 
   Linear: function ( v, k ) {
 
-    var m = v.length - 1, f = m * k, i = Math.floor( f ), fn = TWEEN.Interpolation.Utils.Linear;
+    var m = v.length - 1, f = m * k, i = Math.floor( f ), fn = SPTWEEN.Interpolation.Utils.Linear;
 
     if ( k < 0 ) return fn( v[ 0 ], v[ 1 ], f );
     if ( k > 1 ) return fn( v[ m ], v[ m - 1 ], m - f );
@@ -1029,7 +1021,7 @@ TWEEN.Interpolation = {
 
   Bezier: function ( v, k ) {
 
-    var b = 0, n = v.length - 1, pw = Math.pow, bn = TWEEN.Interpolation.Utils.Bernstein, i;
+    var b = 0, n = v.length - 1, pw = Math.pow, bn = SPTWEEN.Interpolation.Utils.Bernstein, i;
 
     for ( i = 0; i <= n; i++ ) {
       b += pw( 1 - k, n - i ) * pw( k, i ) * v[ i ] * bn( n, i );
@@ -1041,7 +1033,7 @@ TWEEN.Interpolation = {
 
   CatmullRom: function ( v, k ) {
 
-    var m = v.length - 1, f = m * k, i = Math.floor( f ), fn = TWEEN.Interpolation.Utils.CatmullRom;
+    var m = v.length - 1, f = m * k, i = Math.floor( f ), fn = SPTWEEN.Interpolation.Utils.CatmullRom;
 
     if ( v[ 0 ] === v[ m ] ) {
 
@@ -1070,7 +1062,7 @@ TWEEN.Interpolation = {
 
     Bernstein: function ( n , i ) {
 
-      var fc = TWEEN.Interpolation.Utils.Factorial;
+      var fc = SPTWEEN.Interpolation.Utils.Factorial;
       return fc( n ) / fc( i ) / fc( n - i );
 
     },
@@ -1102,5 +1094,5 @@ TWEEN.Interpolation = {
 };
 
 if(typeof module !== 'undefined' && module.exports) {
-  module.exports = TWEEN;
+  module.exports = SPTWEEN;
 }
