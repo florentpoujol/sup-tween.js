@@ -1180,8 +1180,7 @@
 
 				var obj = new MyObject( { x:-5, y:-5, z:-5 } );
 
-				var t = new TWEEN.Tween()
-				.from( obj )
+				var t = new TWEEN.Tween( obj )
 				.to( { position: { x: 10, y: 5 } } )
 				.duration( 1000 )
 				.start( 0 );
