@@ -676,7 +676,8 @@ SPTWEEN.Tween = function ( object ) {
 
               for ( nProperty in endValue ) {
 
-                if ( ( _isRelative === true && nEndValueType === "number" ) || typeof endValue[ nProperty ] === "string" ) {
+                var nEndValueType = typeof endValue[ nProperty ]; 
+                if ( ( _isRelative === true && nEndValueType === "number" ) || nEndValueType === "string" ) {
                   _valuesStart[ property ][ nProperty ] = currentValue[ nProperty ];
                 }
 
@@ -1076,7 +1077,9 @@ SPTWEEN.Interpolation = {
         var s = 1, i;
         if ( a[ n ] ) return a[ n ];
         for ( i = n; i > 1; i-- ) s *= i;
-        return a[ n ] = s;
+        a[ n ] = s;
+        return s;
+        // return a[ n ] = s;
 
       };
 
