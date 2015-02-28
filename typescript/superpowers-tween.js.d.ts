@@ -1,9 +1,9 @@
-// Type definitions for sp-tween.js
-// Project: https://github.com/florentpoujol/tween.js/
-// Origial definitions for sole's tween.js by: sunetos <https://github.com/sunetos>, jzarnikov <https://github.com/jzarnikov>
+// Type definitions for superpowers-tween.js
+// Project: https://github.com/florentpoujol/superpowers-tween.js
+// Origial definitions for Soledad Penadés's tween.js by: sunetos <https://github.com/sunetos>, jzarnikov <https://github.com/jzarnikov>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-declare module "TWEEN" {
+declare module SPTWEEN {
   export var REVISION: string;
   export function getAll(): Tween[];
   export function removeAll(): void;
@@ -12,18 +12,24 @@ declare module "TWEEN" {
   export function update(time?:number): boolean;
 
   export interface TweenCallback {
-    ( object: Object ) => void;
+    (object:Object): void;
+  }
+  export interface TweenUpdateCallback {
+    (object:Object, progression:number): void;
   }
 
-  export interface TweenUpdateCallback {
-    ( object: Object, progression: number ) => void;
+  export interface EasingFunction {
+    (k:number): number;
+  }
+  export interface InterpolationFunction {
+     (v:number[], k:number): number;
   }
   
   export class Tween {
-    constructor(object?:any);
-    from(object?:any): Tween;
-    to(properties:any, duration?:number): Tween;
-    duration(duration: number): Tween;
+    constructor(object?:Object);
+    to(properties:Object, duration?:number): Tween;
+    duration(duration:number): Tween;
+    isRelative(isRelative:boolean): Tween;
     start(time?:number): Tween;
     stop(): Tween;
     pause(): Tween;
@@ -32,22 +38,21 @@ declare module "TWEEN" {
     getChainedTweens(): Array;
     removeChainedTweens(tween?: Tween): number;
     delay(amount:number): Tween;
-    repeat(times: number): Tween;
-    yoyo(enable: boolean): Tween;
-    easing(easing: (k: number) => number): Tween;
-    interpolation(interpolation: (v:number[], k:number) => number): Tween;
+    repeat(times:number): Tween;
+    yoyo(enable:boolean): Tween;
+    easing(easing:EasingFunction): Tween;
+    interpolation(interpolation:InterpolationFunction): Tween;
     chain(...tweens:Tween[]): Tween;
-    onStart(callback: (object?: any) => void): Tween;
-    onUpdate(callback: (object?: any) => void): Tween;
-    onPause(callback: (object?: any) => void): Tween;
-    onResume(callback: (object?: any) => void): Tween;
-    onComplete(callback: (object?: any) => void): Tween;
-    update(time: number): boolean;
+    onStart(callback?:TweenCallback): Tween;
+    onUpdate(callback?:TweenUpdateCallback): Tween;
+    onPause(callback?:TweenCallback): Tween;
+    onResume(callback?:TweenCallback): Tween;
+    onComplete(callback?:TweenCallback): Tween;
+    onStop(callback?:TweenCallback): Tween;
+    update(time:number): boolean;
   }
   export var Easing: TweenEasing;
   export var Interpolation: TweenInterpolation;
-
-  export = TWEEN
 }
 
 export interface TweenEasing {
