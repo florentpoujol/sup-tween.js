@@ -11,12 +11,6 @@
   "bugs": {
     "url": "https://github.com/florentpoujol/sup-tween.js/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/florentpoujol/sup-tween.js/blob/master/LICENSE"
-    }
-  ],
   "keywords": [
     "tween",
     "interpolation",
@@ -31,6 +25,12 @@
     "nodeunit": "^0.9.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/nodeunit test/unit/nodeunitheadless.js"
-  }
+    "test": "nodeunit test/unit/nodeunitheadless.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "author": "Florent Poujol <florent.poujol@gmail.com> (http://florentpoujol.fr)",
+  "license": "MIT"
 }
