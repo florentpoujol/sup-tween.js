@@ -1,9 +1,9 @@
-// Type definitions for superpowers-tween.js
-// Project: https://github.com/florentpoujol/superpowers-tween.js
+// Type definitions for sup-tween.js
+// Project: https://github.com/florentpoujol/sup-tween.js
 // Origial definitions for Soledad Penadés's tween.js by: sunetos <https://github.com/sunetos>, jzarnikov <https://github.com/jzarnikov>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped
 
-declare module SPTWEEN {
+declare module SUPTWEEN {
   export var REVISION: string;
   export function getAll(): Tween[];
   export function removeAll(): void;

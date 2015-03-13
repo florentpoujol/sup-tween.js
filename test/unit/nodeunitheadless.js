@@ -1,6 +1,6 @@
 // We will unit test both the original library and the minified version
-var SPTWEEN_uncompressed = require('../../src/sp-tween.js');
-var SPTWEEN_min = require('../../build/sp-tween.min.js');
+var SPTWEEN_uncompressed = require('../../src/sup-tween.js');
+var SPTWEEN_min = require('../../build/sup-tween.min.js');
 var getTests = require('./tests');
 
 module.exports = {

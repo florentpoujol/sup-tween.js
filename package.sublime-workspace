@@ -1,0 +1,1372 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sh",
+				"shortMode"
+			],
+			[
+				"erros",
+				"errors"
+			],
+			[
+				"asset",
+				"assetPath"
+			],
+			[
+				"mod",
+				"cmMode"
+			],
+			[
+				"local",
+				"localConfig"
+			],
+			[
+				"getEle",
+				"getElementsByClassName"
+			],
+			[
+				"edit",
+				"editor"
+			],
+			[
+				"mark",
+				"markdown"
+			],
+			[
+				"markdown",
+				"markdownToHtml"
+			],
+			[
+				"to",
+				"toJSON"
+			],
+			[
+				"wa",
+				"watchSourcesByTask"
+			],
+			[
+				"commo",
+				"codemirrorMode"
+			],
+			[
+				"brow",
+				"browerifyAll"
+			],
+			[
+				"client",
+				"client_saveText"
+			],
+			[
+				"fTween",
+				"fTweenParams"
+			],
+			[
+				"ev",
+				"EventEmitter"
+			],
+			[
+				"Event",
+				"EventEmitter"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"current",
+				"currentValue"
+			],
+			[
+				"nev",
+				"nEndValueType"
+			],
+			[
+				"_en",
+				"_valuesEnd"
+			],
+			[
+				"_set",
+				"_setupDynamicProperty"
+			],
+			[
+				"endV",
+				"endValueType"
+			],
+			[
+				"endt",
+				"nEndValueType"
+			],
+			[
+				"fT",
+				"fTweenListener"
+			],
+			[
+				"source",
+				"sourceValue"
+			],
+			[
+				"_",
+				"[priv] ○ _checkMilliseconds (value: number, propName: string): void"
+			],
+			[
+				"_is",
+				"_isRelative"
+			],
+			[
+				"is",
+				"isRelative"
+			],
+			[
+				"target",
+				"targetValue"
+			],
+			[
+				"_aut",
+				"[priv] ● _autoTweenTarget boolean"
+			],
+			[
+				"_auto",
+				"[priv] ● _autoTweenBindedListener TweenerUpdateListener"
+			],
+			[
+				"ex",
+				"extendedCallbackNames"
+			],
+			[
+				"event",
+				"eventName"
+			],
+			[
+				"pri",
+				"progression"
+			],
+			[
+				"Inter",
+				"InterpolationFunction"
+			],
+			[
+				"Eas",
+				"EasingFunction"
+			],
+			[
+				"Twe",
+				"TweenerParams"
+			],
+			[
+				"double",
+				"doubleClick"
+			],
+			[
+				"comp",
+				"components"
+			],
+			[
+				"sound",
+				"soundNameOrAsset"
+			],
+			[
+				"sou",
+				"soundNameOrAsset"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"MI",
+				"MouseInput"
+			],
+			[
+				"trigger",
+				"triggerPosition"
+			],
+			[
+				"up",
+				"updateInterval"
+			],
+			[
+				"game",
+				"gameObject"
+			],
+			[
+				"rein",
+				"reindexComponents"
+			],
+			[
+				"error",
+				"errorHead"
+			],
+			[
+				"Default",
+				"DefaultConfig"
+			],
+			[
+				"dic",
+				"dictionariesByLanguage"
+			],
+			[
+				"En",
+				"enableDebug"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 994,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 2570,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test/unit/tests.js",
+			"settings":
+			{
+				"buffer_size": 25402,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"del",
+				"File: Delete"
+			],
+			[
+				"jad",
+				"Set Syntax: Jade"
+			],
+			[
+				"sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"sc",
+				"Set Syntax: C"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"rem",
+				"File: Rename"
+			],
+			[
+				"mo",
+				"File: Move"
+			],
+			[
+				"snips",
+				"Snippet: separator"
+			],
+			[
+				"settdef",
+				"Preferences: Settings - Default"
+			],
+			[
+				"settus",
+				"Preferences: Settings - User"
+			],
+			[
+				"packcon",
+				"Package Control: Enable Package"
+			],
+			[
+				"paccontr",
+				"Package Control: Disable Package"
+			],
+			[
+				"lu",
+				"Set Syntax: Lua Dev"
+			]
+		],
+		"width": 456.0
+	},
+	"console":
+	{
+		"height": 80.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/Development/Superpowers/tweenjs/typescript/sup-tween.js.d.ts",
+		"/F/Development/Superpowers/tweenjs/test/unit/nodeunitheadless.js",
+		"/F/Development/Superpowers/myprojects/dat-gui/entries.json",
+		"/F/Development/Superpowers/myprojects/dat-gui/manifest.json",
+		"/F/Development/Superpowers/myprojects/dat-gui-1/manifest.json",
+		"/F/Development/Superpowers/myprojects/dat-gui2/manifest.json",
+		"/C/Users/Livestream/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Livestream/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Livestream/AppData/Roaming/Sublime Text 3/Packages/Paraiso Dark.tmTheme",
+		"/F/Softwares/Sublime Text 3/Packages/Color Scheme - Default.sublime-package",
+		"/F/Development/Superpowers/superpowers/scripts/makeRelease.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tileMap/api/TileMapRenderer.ts",
+		"/F/Development/Superpowers/superpowers/launcher/src/config.coffee",
+		"/F/Development/Superpowers/superpowers/package.json",
+		"/F/Development/Superpowers/myplugins/text/gitignore/text_asset_plugin.sublime-project",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/AUTHORS",
+		"/F/Development/Superpowers/myplugins/text/node_modules/file/package.json",
+		"/F/Development/Superpowers/myplugins/text/node_modules/system/package.json",
+		"/F/Development/Superpowers/myplugins/text/node_modules/jsonlint/package.json",
+		"/F/Development/Superpowers/myplugins/text/node_modules/jsonlint/lib/jsonlint.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/jsonlint/node_modules/JSV/jsdoc-toolkit/app/test/param_inline.js",
+		"/F/Development/Superpowers/myplugins/text/public/api.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/less/test/less/errors/property-asterisk-only-name.less",
+		"/F/Development/Superpowers/myplugins/text/runtime/text.coffee",
+		"/F/Development/Superpowers/myplugins/fTween/package.json",
+		"/F/Development/Superpowers/myplugins/text/package.json",
+		"/F/Development/Superpowers/myplugins/text/gulpfile.coffee",
+		"/F/Development/Superpowers/myplugins/text/public/engine.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/markdown/package.json",
+		"/F/Development/Superpowers/superpowers/system/SupEngine/src/GameInstance.coffee",
+		"/F/Development/Superpowers/superpowers/system/SupRuntime/src/Player.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/collision2D/api/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/collision2D/components/index.coffee",
+		"/F/Development/Superpowers/superpowers/SupCore/data/base/Asset.coffee",
+		"/F/Development/Superpowers/myplugins/text/data/TextAsset.coffee",
+		"/F/Development/Superpowers/superpowers/system/SupEngine/src/index.coffee",
+		"/F/Development/Superpowers/myplugins/text/engine/index.coffee",
+		"/F/Development/Superpowers/myplugins/text/readme.md",
+		"/F/Development/Superpowers/superpowers/public/builds/vdhR/213/assets/3/asset.json",
+		"/F/Development/Superpowers/superpowers/public/builds/vdhR/202/game.json",
+		"/F/Development/Superpowers/superpowers/projects/dat-gui/entries.json",
+		"/F/Development/Superpowers/superpowers/projects/dat-gui/assets/5/asset.json",
+		"/F/Development/Superpowers/superpowers/SupCore/data/Assets.coffee",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/index.js",
+		"/F/Development/Superpowers/myplugins/text/editors/text/index.coffee",
+		"/F/Development/Superpowers/myplugins/text/gitignore/SupAsset.d.ts",
+		"/F/Development/Superpowers/superpowers/system/player/src/index.coffee",
+		"/F/Development/Superpowers/superpowers/system/SupRuntime/src/index.coffee",
+		"/F/Development/Superpowers/superpowers/system/SupRuntime/SupRuntime.coffee",
+		"/F/Development/Superpowers/myplugins/fTween/api/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/runtime/Sup.ts",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/runtime/Sup.d.ts",
+		"/F/Development/Superpowers/myplugins/text/editors/text/index.styl",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/javascript/javascript.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/coffeescript/coffeescript.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/markdown/markdown.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/meta.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/jade/jade.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/css/css.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/xml/xml.js",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/mode/htmlmixed/htmlmixed.js",
+		"/F/Development/Superpowers/myplugins/fTween/readme.md",
+		"/F/Development/Superpowers/myplugins/text/node_modules/codemirror/lib/codemirror.css",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/public/runtime.js",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/data/ScriptAsset.coffee",
+		"/F/Development/Superpowers/myplugins/text/data/index.coffee",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-modes/javascript/javascript.js",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-modes/htmlmixed/htmlmixed.js",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-modes/stylus/stylus.js",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-modes/jade/jade.js",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-modes/css/css.js",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-modes/markdown/markdown.js",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/codemirror-themes/monokai.css",
+		"/F/Development/Superpowers/myplugins/text/public/editors/text/index.css",
+		"/F/Development/Superpowers/myplugins/text/node_modules/dat-gui/package.json",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/public/components.js",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/runtime/script.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/scene/public/api.js",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/scene/api/scene.ts",
+		"/F/Development/Superpowers/superpowers/SupClient/src/component.coffee",
+		"/F/Development/Superpowers/superpowers/SupAPI/index.coffee",
+		"/F/Development/Superpowers/superpowers/SupCore/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/runtime/index.coffee",
+		"/F/Development/Superpowers/myplugins/text/api/text.ts",
+		"/F/Development/Superpowers/myplugins/text/api/text.d.ts",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/fTween/api/index.coffee",
+		"/F/Development/Superpowers/myplugins/dat-gui/api/index.coffee",
+		"/F/Development/Superpowers/myplugins/text/runtime/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/api/index.coffee",
+		"/F/Development/Superpowers/superpowers/public/plugins.json",
+		"/F/Development/Superpowers/myplugins/dat-gui/package.json",
+		"/F/Development/Superpowers/superpowers/scripts/build.cmd",
+		"/F/Development/Superpowers/superpowers/SupAPI/gulpfile.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/data/TextAsset.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/gulpfile.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/api/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/gulpfile.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/gulpfile.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/public/components.js",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/public/api.js",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/data/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/runtime/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/public/api.js",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/public/data.js",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/public/runtime.js",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/public/componentEditors.js",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/public/componentEditors.js",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/data/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/api/text.ts",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/runtime/text.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/editors/text/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/editors/script/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/typescript/public/editors/script/index.js",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/dat.gui/api/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/dat.gui/api/dat-gui.ts",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/dat.gui/gulpfile.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/dat.gui/api/dat-gui.d.ts",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/dat.gui/runtime/dat-gui.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tweenjs/gulpfile.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tweenjs/api/Tween.ts",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tweenjs/api/Tween.d.ts",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/dat.gui/runtime/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tweenjs/runtime/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tweenjs/api/index.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/florentpoujol/text/runtime/test.d.ts",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/sprite/runtime/sprite.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/sprite/runtime/SpriteRenderer.coffee",
+		"/F/Development/Superpowers/superpowers/plugins/sparklinlabs/tweenjs/runtime/tweenjs.coffee"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\,-node_modules/",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\sparklinlabs/typescript,-node_modules/",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\,-node_modules/",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\,*.ts",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\,.ts",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\*.ts",
+			"F:\\Development\\Superpowers\\superpowers\\plugins",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\florentpoujol\\text\\node_modules,",
+			"F:\\Development\\Superpowers\\superpowers\\plugins\\florentpoujol\\text\\node_modules\\stylus,-*.html,-*.min.*",
+			"F:\\Development\\Superpowers\\superpowers,-*.html,-*.min.*",
+			"F:\\Development\\Superpowers\\dat.gui\\src,-*.html,-*.min.*,-*.csscript,<open files>",
+			"F:\\Development\\Superpowers\\dat.gui\\src,-*.html,-*.min.*,-*.csscript,",
+			"/,-*.html,-*.min.*,-*.csscript,",
+			"F:\\Development\\CraftStudio\\Daneel\\src,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel\\docs,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel\\src,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel\\docs,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel\\src,F:\\Development\\CraftStudio\\Daneel\\tests,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel\\src,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel\\framework,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel,-*.html,-*.min.lua,-*.csscript",
+			"F:\\Development\\CraftStudio\\Daneel,-*.html,-*.min.lua"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"fs",
+			"color",
+			"theme",
+			", ",
+			"serverAPI",
+			"serverData",
+			"errors",
+			"saveText",
+			"onAssetEdited",
+			"onAssetCommands",
+			"saveText",
+			"text",
+			"interpolation",
+			"runtime",
+			"player",
+			"info",
+			"data",
+			"process.bin",
+			"html",
+			"markdown",
+			"jade",
+			"cmTheme",
+			"cmMode",
+			"theme",
+			"cm-",
+			"cm-mo",
+			"cm",
+			"codemirror",
+			"                        20-Feb-2015 16:47                ",
+			"lessToCSS",
+			"return",
+			"json",
+			"jade",
+			"html",
+			"markdown",
+			"codemirror",
+			"markdown",
+			"javascript",
+			"cm-",
+			"close",
+			"ui.editor",
+			"ts runt",
+			"createComponent",
+			"createCompo",
+			"tsCom",
+			"behaviorClasses",
+			"player.behaviorClasses",
+			"createComponent",
+			"createCompnent",
+			"type === \"Beh",
+			"Event",
+			"#{",
+			"runtime",
+			"./",
+			"plugin",
+			"api",
+			"SupCore.api",
+			"api",
+			"text",
+			"script",
+			"Tween",
+			"conso",
+			"functions.styl",
+			"md",
+			"markdown",
+			"text",
+			"DOM",
+			"object",
+			"Objec",
+			"Obj",
+			"script",
+			"data.task",
+			"script",
+			"javascript",
+			"Operation",
+			"jade",
+			"Mode",
+			"htmlmixed",
+			"mode",
+			"while",
+			"onWelcome",
+			"pub",
+			"asset",
+			"loadAsset",
+			"asset",
+			"browerifyAll",
+			"this.__inner",
+			"JSON",
+			"Sprite",
+			"Asset",
+			"Script",
+			"behavi",
+			"...args",
+			"save",
+			"onEditText",
+			"script",
+			"code",
+			"script",
+			"code",
+			"script",
+			"Script",
+			"port",
+			"?",
+			"fTween",
+			"_extends",
+			"_tweener",
+			"_resetFrom",
+			"target",
+			"_exactCopy",
+			"callback",
+			"EventEmitter",
+			"TweenEasing",
+			"easing",
+			"_setObjectValue",
+			"obj.getPosition()",
+			"position",
+			"_reversed",
+			"nValue",
+			"value",
+			"objectValue",
+			"valueType",
+			"Property",
+			"_setPropertyValue(",
+			"_setObjectValue(",
+			"_getPropertyValue(",
+			"_object[ property ]",
+			"_object[ property ] = ",
+			"_object[ property ]"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"_setObjectValue(",
+			"_getObjectValue(",
+			"_getPropertyValue( property )",
+			"fTween",
+			"TweenerUpdateListener",
+			"TweenerListener",
+			"(",
+			"/dev/",
+			"--------------------------------------------------------------------------------",
+			"componentObjectsByType = ",
+			".assetObjectsByType",
+			".componentObjectsByType",
+			"Daneel.Config.objectsByType",
+			"printr",
+			"MouseInput.lastLeftClickFrame",
+			"MouseInput.frameCount",
+			"----------------------------------------------------------------------------------",
+			"--------------------------------------------------------------------------------"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								871,
+								871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test/unit/tests.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "package.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"apiinde",
+				"api\\index.coffee"
+			],
+			[
+				"apin",
+				"api\\index.coffee"
+			],
+			[
+				"gui",
+				"src\\dat\\gui\\GUI.js"
+			],
+			[
+				"cocon",
+				"src\\dat\\controllers\\Controller.js"
+			],
+			[
+				"bda",
+				"build\\Daneel.lua"
+			],
+			[
+				"lu",
+				"src\\Lua.lua"
+			],
+			[
+				"vec",
+				"GitIgnore\\Lua\\Math\\Vector3.lua"
+			],
+			[
+				"craf",
+				"src\\CraftStudio.lua"
+			],
+			[
+				"da",
+				"build\\Daneel.lua"
+			],
+			[
+				"cra",
+				"src\\CraftStudio.lua"
+			],
+			[
+				"docol",
+				"docs\\dev\\files\\color.md"
+			],
+			[
+				"colo",
+				"src\\Color.lua"
+			],
+			[
+				"tags",
+				"src\\scripted behaviors\\Tags.lua"
+			],
+			[
+				"lua",
+				"src\\Lua.lua"
+			],
+			[
+				"tw",
+				"src\\Tween.lua"
+			],
+			[
+				"dan",
+				"build\\Daneel.lua"
+			],
+			[
+				"cr",
+				"src\\CraftStudio.lua"
+			],
+			[
+				"twe",
+				"src\\Tween.lua"
+			],
+			[
+				"sc",
+				"F:\\Development\\CraftStudio\\Lico\\Raw sounds\\sound credits.txt"
+			],
+			[
+				"v",
+				"GitIgnore\\Lua\\Math\\Vector3.lua"
+			],
+			[
+				"build",
+				"build\\build.js"
+			],
+			[
+				"set",
+				"docs\\dev\\files\\setup.md"
+			],
+			[
+				"buil",
+				"build\\build.js"
+			],
+			[
+				"dmin",
+				"build\\Daneel.min.lua"
+			],
+			[
+				"dane",
+				"build\\Daneel.lua"
+			],
+			[
+				"tog",
+				"src\\scripted behaviors\\Toggle.lua"
+			],
+			[
+				"prog",
+				"src\\scripted behaviors\\ProgressBar.lua"
+			],
+			[
+				"slid",
+				"src\\scripted behaviors\\Slider.lua"
+			],
+			[
+				"sli",
+				"src\\scripted behaviors\\Slider.lua"
+			],
+			[
+				"tex",
+				"src\\scripted behaviors\\TextArea.lua"
+			],
+			[
+				"inp",
+				"src\\scripted behaviors\\Input.lua"
+			],
+			[
+				"schud",
+				"src\\scripted behaviors\\Hud.lua"
+			],
+			[
+				"lan",
+				"src\\scripted behaviors\\Lang.lua"
+			],
+			[
+				"tri",
+				"src\\scripted behaviors\\Trigger.lua"
+			],
+			[
+				"mou",
+				"src\\scripted behaviors\\MouseInput.lua"
+			],
+			[
+				"bdmi",
+				"build\\Daneel.min.lua"
+			],
+			[
+				"func",
+				"docs\\dev\\files\\daneel_v1-5-0_function-reference.html"
+			],
+			[
+				"fbd",
+				"files\\build\\Daneel.html"
+			],
+			[
+				"ddebug",
+				"docs\\dev\\files\\debug.md"
+			],
+			[
+				"inpu",
+				"src\\scripted behaviors\\Input.lua"
+			],
+			[
+				"moi",
+				"src\\scripted behaviors\\MouseInput.lua"
+			],
+			[
+				"hom",
+				"docs\\dev\\files\\home.md"
+			],
+			[
+				"css",
+				"docs\\dev\\assets\\css\\daneeldoc.css"
+			],
+			[
+				"se",
+				"docs\\dev\\files\\setup.md"
+			],
+			[
+				"tem",
+				"docs\\dev\\template.php"
+			],
+			[
+				"dgui",
+				"docs\\dev\\files\\gui.md"
+			],
+			[
+				"dlan",
+				"docs\\dev\\files\\lang.md"
+			],
+			[
+				"lang",
+				"src\\scripted behaviors\\Lang.lua"
+			],
+			[
+				"ex",
+				"docs\\dev\\files\\example-projects.md"
+			],
+			[
+				"dtwe",
+				"docs\\dev\\files\\tween.md"
+			],
+			[
+				"tu",
+				"docs\\dev\\files\\tutorials.md"
+			],
+			[
+				"fun",
+				"docs\\dev\\files\\daneel_v1-5-0_function-reference.html"
+			],
+			[
+				"dmod",
+				"docs\\dev\\files\\modules.md"
+			],
+			[
+				"modu",
+				"tests\\lua\\Modules.lua"
+			],
+			[
+				"fe",
+				"docs\\dev\\files\\features.md"
+			],
+			[
+				"man",
+				"src\\Main.lua"
+			],
+			[
+				"debug",
+				"docs\\files\\debug.md"
+			],
+			[
+				"moin",
+				"docs\\files\\mouse-input.md"
+			],
+			[
+				"col",
+				"src\\Color.lua"
+			],
+			[
+				"color",
+				"docs\\files\\color.md"
+			],
+			[
+				"mousin",
+				"docs\\files\\mouse-input.md"
+			],
+			[
+				"even",
+				"docs\\files\\event.md"
+			],
+			[
+				"ho",
+				"docs\\files\\home.md"
+			],
+			[
+				"moinmd",
+				"docs\\files\\mouse-input.md"
+			],
+			[
+				"moui",
+				"src\\scripted behaviors\\MouseInput.lua"
+			],
+			[
+				"temp",
+				"docs\\template.php"
+			],
+			[
+				".css",
+				"docs\\assets\\css\\daneeldoc.css"
+			],
+			[
+				"mo",
+				"docs\\files\\mouse-input.md"
+			],
+			[
+				"trig",
+				"docs\\files\\trigger.md"
+			],
+			[
+				"mousi",
+				"docs\\files\\mouse-input.md"
+			],
+			[
+				"setup",
+				"docs\\files\\setup.md"
+			],
+			[
+				"exa",
+				"docs\\files\\example-projects.md"
+			],
+			[
+				"twee",
+				"docs\\files\\tween.md"
+			],
+			[
+				"faq",
+				"docs\\files\\faq-tutorial.md"
+			],
+			[
+				"sid",
+				"docs\\files\\sidebar.md"
+			],
+			[
+				"mai",
+				"src\\Main.lua"
+			],
+			[
+				"guit",
+				"tests\\lua\\GUI Tests.lua"
+			],
+			[
+				"texa",
+				"src\\scripted behaviors\\TextArea.lua"
+			],
+			[
+				"tcr",
+				"tests\\lua\\CraftStudio Tests.lua"
+			],
+			[
+				"dte",
+				"tests\\lua\\Daneel Tests.lua"
+			],
+			[
+				"mouin",
+				"src\\scripted behaviors\\MouseInput.lua"
+			],
+			[
+				"com",
+				"daneelcomplete\\DaneelComplete.lua"
+			],
+			[
+				"funref",
+				"docs\\docs\\files\\function-reference.html"
+			],
+			[
+				"decm",
+				"daneelcomplete\\DaneelComplete.min.lua"
+			],
+			[
+				"dco",
+				"daneelcomplete\\DaneelComplete.lua"
+			],
+			[
+				"miscl",
+				"docs\\docs\\files\\miscellaneous-features.md"
+			],
+			[
+				"eve",
+				"docs\\docs\\files\\events.md"
+			],
+			[
+				"side",
+				"docs\\docs\\files\\sidebar.md"
+			],
+			[
+				"v35",
+				"docs\\docs\\assets\\css\\style_v35.css"
+			],
+			[
+				"evens",
+				"docs\\docs\\files\\events.md"
+			],
+			[
+				"deb",
+				"docs\\docs\\files\\debugging.md"
+			],
+			[
+				"mas",
+				"docs\\docs\\files\\mass-setting.md"
+			],
+			[
+				"mod",
+				"docs\\docs\\files\\daneel\\modules.md"
+			],
+			[
+				"dda",
+				"docs\\docs\\files\\daneel.md"
+			],
+			[
+				"fdan",
+				"files\\Daneel.html"
+			],
+			[
+				"craft",
+				"docs\\docs\\files\\craftstudio.md"
+			],
+			[
+				"dacom",
+				"daneelcomplete\\DaneelComplete.lua"
+			],
+			[
+				"lanbe",
+				"framework\\scripted behaviors\\Lang Behavior.lua"
+			],
+			[
+				"dfr",
+				"docs\\docs\\files\\craftstudio\\function-reference.md"
+			],
+			[
+				"draw",
+				"docs\\docs\\files\\draw.md"
+			],
+			[
+				"bmib",
+				"framework\\scripted behaviors\\Mouse Input Behavior.lua"
+			],
+			[
+				"bemou",
+				"framework\\scripted behaviors\\Mouse Input.lua"
+			],
+			[
+				"module",
+				"docs\\docs\\files\\daneel\\modules.md"
+			],
+			[
+				"dra",
+				"framework\\Draw.lua"
+			],
+			[
+				"mous",
+				"framework\\scripted behaviors\\Mouse Input.lua"
+			],
+			[
+				"dr",
+				"framework\\Draw.lua"
+			],
+			[
+				"read",
+				"readme.md"
+			],
+			[
+				"chan",
+				"docs\\docs\\files\\changelog.md"
+			],
+			[
+				"dochom",
+				"docs\\docs\\files\\home.md"
+			],
+			[
+				"gitign",
+				".gitignore"
+			],
+			[
+				"mi",
+				"DaneelComplete\\minify_daneel.js"
+			],
+			[
+				"tim",
+				"Tween\\Timer.lua"
+			],
+			[
+				"cir",
+				"Draw\\CircleRenderer.lua"
+			],
+			[
+				"lin",
+				"Draw\\LineRenderer.lua"
+			],
+			[
+				"co",
+				"Color.lua"
+			],
+			[
+				"dcm",
+				"Luamin\\DaneelComplete.min.lua"
+			],
+			[
+				"dc",
+				"Luamin\\DaneelComplete.lua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 288.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

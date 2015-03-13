@@ -9,18 +9,18 @@ var metadata = require('./package');
 var header = '// ' + metadata.name + ' v' + metadata.version + ' ' + metadata.homepage + '\n';
 
 gulp.task('lint', function() {
-	return gulp.src('src/sp-tweenjs.js')
+	return gulp.src('src/sup-tween.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'));
 });
 
 gulp.task('min', function() {
 	return gulp.src([
-		'src/sp-tweenjs.js'
+		'src/sup-tween.js'
 	])
 	.pipe(uglify())
 	.pipe(insert.prepend(header))
-	.pipe(rename('sp-tweenjs.min.js'))
+	.pipe(rename('sup-tween.min.js'))
 	.pipe(gulp.dest('build'));
 });
 

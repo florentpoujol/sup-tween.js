@@ -1,4 +1,4 @@
-# superowers-tween.js 
+# sup-tween.js 
 
 A fork of Soledad Penadés' tween.js library : https://github.com/tweenjs/tween.js
  
@@ -8,7 +8,7 @@ Super simple, fast and easy to use tweening engine which incorporates optimised 
 
 ## Changes from the original tween.js
 
-`superpowers-tween.js` has been created to power the `fTween` plugin for the [Superpowers HTML5 game engine](http://sparklinlabs.com).  
+`sup-tween.js` has been created to power the `fTween` plugin for the [Superpowers, the extensible HTML5 2D+3D game engine](http://sparklinlabs.com).  
 
 The following functionalities have been added:
 
@@ -38,7 +38,7 @@ The following functionalities have been added:
 
 	var myInstance = new MyObject( { x:-5, y:-5, z:-5 } );
 
-	var tween = new SPTWEEN.Tween( myInstance )
+	var tween = new SUPTWEEN.Tween( myInstance )
 	.to( { position: { x: 10, y: 5 } } )
 	.isRelative( true )
 	.duration( 5000 )
@@ -50,17 +50,16 @@ The following functionalities have been added:
 	// This will tween the position from {-5,-5,-5} to {5,0,-5}.
 ```
 
-Otherwise, superpowers-tween.js works exactly like the original tween.js, so be sure to [check its readme](https://github.com/tweenjs/tween.js/blob/master/README.md) (with many examples) and [its user guide](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md).
-
+Otherwise, sup-tween.js works exactly like the original tween.js, so be sure to [check its readme](https://github.com/tweenjs/tween.js/blob/master/README.md) (with many examples) and [its user guide](https://github.com/tweenjs/tween.js/blob/master/docs/user_guide.md).
 
 ## Installation
 
 From npm: 
 
-	npm install superpowers-tween.js
+	npm install sup-tween.js
 
 Then from your code: 
 
-	var SPTWEEN = require("superpowers-tween.js");
+	var SUPTWEEN = require("sup-tween.js");
 
-Or get the development and minified files from the build folder.
+Or get the development and minified files from the `src` and `build` folder.
