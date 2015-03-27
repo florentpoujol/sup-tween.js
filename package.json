@@ -25,7 +25,8 @@
     "nodeunit": "^0.9.0"
   },
   "scripts": {
-    "test": "nodeunit test/unit/nodeunitheadless.js"
+    "test": "nodeunit test/unit/nodeunitheadless.js",
+    "build": "gulp build"
   },
   "directories": {
     "test": "test"

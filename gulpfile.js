@@ -25,7 +25,9 @@ gulp.task('min', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/*.js', ['lint', 'min']);
+	gulp.watch('src/*.js', ['build']);
 });
 
-gulp.task('default', ['lint', 'min', 'watch']);
+gulp.task('build', ['lint', 'min']);
+
+gulp.task('default', ['build']);
