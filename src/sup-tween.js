@@ -168,7 +168,8 @@ SUPTWEEN.Tween = function ( object ) {
       if (this.test) console.log("set", property, value);
       _accessorsByProperties[ property ].setter.call( _object, value );
     }
-    _object[ property ] = value;
+    else
+      _object[ property ] = value;
 
   };
 
